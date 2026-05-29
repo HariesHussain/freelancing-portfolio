@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+﻿import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import fs from 'fs'
@@ -38,7 +38,7 @@ Sitemap: ${siteUrl}/sitemap.xml`;
 
         fs.writeFileSync(path.resolve(__dirname, 'public/sitemap.xml'), sitemap);
         fs.writeFileSync(path.resolve(__dirname, 'public/robots.txt'), robots);
-        console.log('\\n[SEO Sync] Updated sitemap.xml and robots.txt to use:', siteUrl, '\\n');
+        console.log('\n[SEO Sync] Updated sitemap.xml and robots.txt to use:', siteUrl, '\n');
       }
     }
   };
@@ -46,6 +46,9 @@ Sitemap: ${siteUrl}/sitemap.xml`;
 
 // https://vite.dev/config/
 export default defineConfig({
+  build: {
+    charset: 'utf-8',
+  },
   plugins: [
     tailwindcss(),
     react(),

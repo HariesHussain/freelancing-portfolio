@@ -1,20 +1,21 @@
-import { useEffect } from 'react';
+﻿import { useEffect } from 'react';
 import { SITE_URL, SEO } from '../seo.config.js';
 
-/**
- * SEOHead — Dynamically injects all SEO meta tags and JSON-LD structured data
- * into the document head. Reads everything from seo.config.js so changing your
- * domain in ONE place updates the entire SEO layer.
- */
-const SEOHead = () => {
+const SEOHead = ({
+  title,
+  description,
+  keywords,
+  canonical,
+}) => {
   useEffect(() => {
-    const url = SITE_URL;
-    const ogImageFull = `${url}${SEO.ogImage}`;
+    const resolvedTitle = title || SEO.title;
+    const resolvedDescription = description || SEO.description;
+    const resolvedKeywords = keywords || SEO.keywords;
+    const resolvedCanonical = canonical || `${SITE_URL}/`;
+    const ogImageFull = `${SITE_URL}${SEO.ogImage}`;
 
-    // ── Document Title ──
-    document.title = SEO.title;
+    document.title = resolvedTitle;
 
-    // ── Helper: set or create a meta tag ──
     const setMeta = (attr, attrValue, content) => {
       let el = document.querySelector(`meta[${attr}="${attrValue}"]`);
       if (!el) {
@@ -25,43 +26,37 @@ const SEOHead = () => {
       el.setAttribute('content', content);
     };
 
-    // ── Primary SEO Meta ──
-    setMeta('name', 'description', SEO.description);
-    setMeta('name', 'keywords', SEO.keywords);
+    setMeta('name', 'description', resolvedDescription);
+    setMeta('name', 'keywords', resolvedKeywords);
     setMeta('name', 'author', SEO.name);
     setMeta('name', 'robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
 
-    // ── Canonical ──
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
+    let canonicalEl = document.querySelector('link[rel="canonical"]');
+    if (!canonicalEl) {
+      canonicalEl = document.createElement('link');
+      canonicalEl.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalEl);
     }
-    canonical.setAttribute('href', `${url}/`);
+    canonicalEl.setAttribute('href', resolvedCanonical);
 
-    // ── Open Graph ──
     setMeta('property', 'og:type', 'website');
-    setMeta('property', 'og:site_name', `${SEO.name} — ${SEO.jobTitle}`);
-    setMeta('property', 'og:title', SEO.ogTitle);
-    setMeta('property', 'og:description', SEO.ogDescription);
-    setMeta('property', 'og:url', `${url}/`);
+    setMeta('property', 'og:site_name', `${SEO.name} - ${SEO.jobTitle}`);
+    setMeta('property', 'og:title', resolvedTitle);
+    setMeta('property', 'og:description', resolvedDescription);
+    setMeta('property', 'og:url', resolvedCanonical);
     setMeta('property', 'og:image', ogImageFull);
     setMeta('property', 'og:image:width', '1200');
     setMeta('property', 'og:image:height', '630');
     setMeta('property', 'og:locale', 'en_IN');
 
-    // ── Twitter / X ──
     setMeta('name', 'twitter:card', 'summary_large_image');
-    setMeta('name', 'twitter:title', SEO.ogTitle);
-    setMeta('name', 'twitter:description', SEO.ogDescription);
+    setMeta('name', 'twitter:title', resolvedTitle);
+    setMeta('name', 'twitter:description', resolvedDescription);
     setMeta('name', 'twitter:image', ogImageFull);
 
-    // ── Geo ──
     setMeta('name', 'geo.region', SEO.location.countryCode);
     setMeta('name', 'geo.placename', `${SEO.location.city}, ${SEO.location.state}, ${SEO.location.country}`);
 
-    // ── JSON-LD Structured Data ──
     const existingLd = document.querySelector('script[data-seo-ld]');
     if (existingLd) existingLd.remove();
 
@@ -70,18 +65,18 @@ const SEOHead = () => {
       '@graph': [
         {
           '@type': 'WebSite',
-          '@id': `${url}/#website`,
-          url: `${url}/`,
-          name: `${SEO.name} — ${SEO.jobTitle}`,
-          description: SEO.description,
+          '@id': `${SITE_URL}/#website`,
+          url: resolvedCanonical,
+          name: `${SEO.name} - ${SEO.jobTitle}`,
+          description: resolvedDescription,
           inLanguage: 'en-IN',
-          publisher: { '@id': `${url}/#person` },
+          publisher: { '@id': `${SITE_URL}/#person` },
         },
         {
           '@type': 'Person',
-          '@id': `${url}/#person`,
+          '@id': `${SITE_URL}/#person`,
           name: SEO.name,
-          url: `${url}/`,
+          url: `${SITE_URL}/`,
           image: ogImageFull,
           email: SEO.email,
           telephone: SEO.phone,
@@ -92,50 +87,7 @@ const SEOHead = () => {
             addressRegion: SEO.location.state,
             addressCountry: SEO.location.countryCode,
           },
-          sameAs: SEO.socialLinks, // <-- Added SameAs Links Here
-        },
-        {
-          '@type': 'LocalBusiness', // <-- Changed to LocalBusiness for stronger Local SEO
-          '@id': `${url}/#service`,
-          name: `${SEO.name} — Web Development Services`,
-          url: `${url}/`,
-          image: ogImageFull,
-          description: SEO.description,
-          telephone: SEO.phone,
-          email: SEO.email,
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: SEO.location.city,
-            addressRegion: SEO.location.state,
-            addressCountry: SEO.location.countryCode,
-          },
-          priceRange: '$$',
-          areaServed: [
-            { '@type': 'City', name: SEO.location.city },
-            { '@type': 'State', name: SEO.location.state },
-            { '@type': 'Country', name: SEO.location.country },
-          ],
-          hasOfferCatalog: {
-            '@type': 'OfferCatalog',
-            name: 'Web Development Services',
-            itemListElement: SEO.services.map((name) => ({
-              '@type': 'Offer',
-              itemOffered: { '@type': 'Service', name },
-            })),
-          },
           sameAs: SEO.socialLinks,
-        },
-        {
-          '@type': 'BreadcrumbList',
-          '@id': `${url}/#breadcrumb`,
-          itemListElement: [
-            {
-              '@type': 'ListItem',
-              position: 1,
-              name: 'Home',
-              item: `${url}/`,
-            },
-          ],
         },
       ],
     };
@@ -146,14 +98,13 @@ const SEOHead = () => {
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
 
-    // Cleanup on unmount
     return () => {
       const ldScript = document.querySelector('script[data-seo-ld]');
       if (ldScript) ldScript.remove();
     };
-  }, []);
+  }, [title, description, keywords, canonical]);
 
-  return null; // This component renders nothing visually
+  return null;
 };
 
 export default SEOHead;

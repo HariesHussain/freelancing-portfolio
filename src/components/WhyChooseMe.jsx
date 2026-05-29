@@ -49,6 +49,24 @@ const WhyChooseMe = () => {
                         );
                     })}
                 </div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 }}
+                    className="mt-8 lg:mt-12 text-center"
+                >
+                    <p className="text-sm text-slate-500 mb-3">
+                        Sounds like what you need?
+                    </p>
+                    <a
+                        href="#contact"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl border border-blue-500 text-blue-600 text-sm font-medium hover:bg-blue-50 transition-colors"
+                    >
+                        Get Free Quote
+                    </a>
+                </motion.div>
             </div>
         </section>
     );

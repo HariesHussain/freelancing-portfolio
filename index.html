@@ -35,7 +35,35 @@
   <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="dns-prefetch" href="https://formsubmit.co" />
+  
+  <!-- Preload high-priority hero asset for LCP optimization -->
+  <link rel="preload" href="/hero-profile.png" as="image" />
+
+  <!-- Critical styles for FOUC prevention and skeleton loading animations -->
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+    @keyframes skeleton-shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .sk-el {
+      background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+      background-size: 200% 100%;
+      animation: skeleton-shimmer 1.5s infinite linear;
+    }
+  </style>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DV22ZPHD3Y"></script>
@@ -52,7 +80,40 @@
   <a href="#home"
     class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[999] focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-slate-900 focus:font-semibold">Skip
     to main content</a>
-  <div id="root"></div>
+  <div id="root">
+    <!-- Static shimmer skeletons loaded instantly on first paint -->
+    <div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; min-height: 100vh; background: #ffffff;">
+      <!-- Header Skeleton -->
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border-bottom: 1px solid #f1f5f9; max-width: 1280px; margin: 0 auto; box-sizing: border-box;">
+        <div class="sk-el" style="width: 100px; height: 26px; border-radius: 6px;"></div>
+        <div style="display: flex; gap: 24px; align-items: center;">
+          <div class="sk-el" style="width: 50px; height: 16px; border-radius: 4px;"></div>
+          <div class="sk-el" style="width: 60px; height: 16px; border-radius: 4px;"></div>
+          <div class="sk-el" style="width: 55px; height: 16px; border-radius: 4px;"></div>
+          <div class="sk-el" style="width: 50px; height: 16px; border-radius: 4px;"></div>
+          <div class="sk-el" style="width: 45px; height: 16px; border-radius: 4px;"></div>
+          <div class="sk-el" style="width: 55px; height: 16px; border-radius: 4px;"></div>
+        </div>
+      </div>
+      <!-- Hero Skeleton -->
+      <div style="display: flex; flex-direction: column; max-width: 1280px; margin: 80px auto 0; padding: 0 24px; box-sizing: border-box;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 48px; width: 100%;">
+          <!-- Hero Left Column -->
+          <div style="flex: 1; min-width: 320px; display: flex; flex-direction: column; gap: 18px;">
+            <div class="sk-el" style="width: 180px; height: 32px; border-radius: 9999px;"></div>
+            <div class="sk-el" style="width: 130px; height: 22px; border-radius: 4px; margin-bottom: 8px;"></div>
+            <div class="sk-el" style="width: 90%; height: 50px; border-radius: 10px;"></div>
+            <div class="sk-el" style="width: 75%; height: 50px; border-radius: 10px; margin-bottom: 8px;"></div>
+            <div class="sk-el" style="width: 95%; height: 18px; border-radius: 4px;"></div>
+            <div class="sk-el" style="width: 85%; height: 18px; border-radius: 4px; margin-bottom: 12px;"></div>
+            <div class="sk-el" style="width: 170px; height: 48px; border-radius: 12px;"></div>
+          </div>
+          <!-- Hero Right Column -->
+          <div class="sk-el" style="width: 360px; height: 450px; border-radius: 40px; margin: 0 auto;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

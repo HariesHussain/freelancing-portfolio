@@ -1,17 +1,17 @@
-// ============================================================
-// SEO CONFIGURATION — Single Source of Truth
+﻿// ============================================================
+// SEO CONFIGURATION â€” Single Source of Truth
 // ============================================================
 //
-// ⚡ CHANGE YOUR DOMAIN HERE ONCE — everything else updates automatically.
+// âš¡ CHANGE YOUR DOMAIN HERE ONCE â€” everything else updates automatically.
 //    When you decide on .com / .in / .tech / .dev / .vercel.app etc,
 //    just update SITE_URL below and rebuild.
 //
 // ============================================================
 
-export const SITE_URL = 'https://harieshussain.tech'; // ← CHANGE THIS TO YOUR FINAL DOMAIN
+export const SITE_URL = 'https://harieshussain.tech'; // â† CHANGE THIS TO YOUR FINAL DOMAIN
 
 export const SEO = {
-  // ─── Identity ───────────────────────────────────────────
+  // â”€â”€â”€ Identity â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   name: 'Haries Hussain',
   jobTitle: 'Full Stack Web Developer',
   email: 'shaikharieshussain09@gmail.com',
@@ -23,7 +23,7 @@ export const SEO = {
     countryCode: 'IN',
   },
 
-  // ─── Social Links for Schema ────────────────────────────
+  // â”€â”€â”€ Social Links for Schema â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   socialLinks: [
     'https://share.google/Yq7Igmt5GEHjpqj8G',        // Google Business Profile
     'https://jsdl.in/DT-99UUITGPDT8',                // Justdial
@@ -32,7 +32,7 @@ export const SEO = {
     'https://www.instagram.com/haries__shaik/'       // Instagram
   ],
 
-  // ─── Page Meta ──────────────────────────────────────────
+  // â”€â”€â”€ Page Meta â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   title: 'Haries Hussain | Freelance Web Developer in Nandyal',
   description:
     'Haries Hussain is a full stack website developer based in Nandyal, Andhra Pradesh, India. Specializing in freelance web development, portfolio websites, and landing pages.',
@@ -48,19 +48,18 @@ export const SEO = {
     'Haries Hussain',
   ].join(', '),
 
-  // ─── Open Graph / Social ────────────────────────────────
+  // â”€â”€â”€ Open Graph / Social â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   ogTitle: 'Haries Hussain | Freelance Web Developer in Nandyal',
   ogDescription:
     'I build premium, fast, mobile-friendly websites for businesses that want to grow. Modern design, SEO optimization, and high-converting pages.',
   ogImage: '/hero-profile.png', // resolved dynamically via SITE_URL
 
-  // ─── Services (for Schema) ──────────────────────────────
+  // â”€â”€â”€ Services (for Schema) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   services: [
     'Business Websites',
-    'Portfolio Websites',
-    'E-commerce Stores',
-    'Landing Pages',
+    'Portfolio Websites',    'Landing Pages',
     'Website Redesign',
     'SEO Optimization',
   ],
 };
+

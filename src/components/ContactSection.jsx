@@ -107,7 +107,7 @@ const ContactSection = () => {
                initial={{ opacity: 0, x: -30 }}
                whileInView={{ opacity: 1, x: 0 }}
                viewport={{ once: true }}
-               className="lg:col-span-3 bg-white border border-slate-200 rounded-[2rem] p-6 lg:p-12 shadow-xl"
+               className="lg:col-span-3 bg-white border border-slate-200/70 rounded-[2.25rem] p-6 lg:p-12 shadow-[0_10px_40px_rgba(15,23,42,0.03)]"
             >
                 {status === 'success' ? (
                   <motion.div 
@@ -239,28 +239,28 @@ const ContactSection = () => {
                viewport={{ once: true }}
                className="lg:col-span-2 space-y-8 lg:sticky lg:top-32"
             >
-                <div className="bg-slate-900 rounded-[2rem] p-6 lg:p-10 shadow-2xl text-white relative overflow-hidden flex flex-col h-full">
+                <div className="bg-slate-900 rounded-[2.25rem] border border-slate-800 p-6 lg:p-10 shadow-[0_20px_50px_rgba(15,23,42,0.08)] text-white relative overflow-hidden flex flex-col h-full">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[60px] pointer-events-none -translate-y-1/2 translate-x-1/2" />
                     
                     <h3 className="text-2xl font-bold mb-8 relative z-10 text-white">Contact Information</h3>
                     
-                    <div className="space-y-8 relative z-10 flex-grow">
+                    <div className="space-y-4 relative z-10 flex-grow">
                         {config.contactInfo.map((info, idx) => (
                             <a 
                                 key={idx}
                                 href={info.link || '#'}
                                 target={info.link ? "_blank" : undefined}
                                 rel={info.link ? "noopener noreferrer" : undefined}
-                                className="flex items-start gap-4 group"
+                                className="flex items-center gap-4 group bg-white/5 border border-white/10 hover:bg-white/8 hover:border-white/15 p-4 rounded-2xl transition-all duration-300 shadow-inner"
                             >
                                 <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-300">
                                     <span className="text-white">
                                         {React.cloneElement(info.icon, { className: 'w-5 h-5 text-current' })}
                                     </span>
                                 </div>
-                                <div className="flex flex-col pt-1 min-w-0">
-                                    <span className="text-sm text-slate-400 font-medium mb-1">{info.label}</span>
-                                    <span className="text-base lg:text-lg text-white font-semibold group-hover:text-blue-400 transition-colors break-all lg:break-normal">{info.value}</span>
+                                <div className="flex flex-col min-w-0">
+                                    <span className="text-xs text-slate-400 font-medium mb-0.5">{info.label}</span>
+                                    <span className="text-sm md:text-base text-white font-semibold group-hover:text-blue-400 transition-colors break-all">{info.value}</span>
                                 </div>
                             </a>
                         ))}

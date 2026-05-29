@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { config } from '../config.jsx';
 
@@ -13,7 +13,7 @@ const Services = () => {
                         viewport={{ once: true }}
                         className="text-2xl md:text-5xl font-bold mb-3 lg:mb-6 text-slate-900"
                     >
-                        My Services
+                        {config.servicesHeading}
                     </motion.h2>
                     <motion.p 
                         initial={{ opacity: 0, y: 20 }}
@@ -22,7 +22,7 @@ const Services = () => {
                         transition={{ delay: 0.1 }}
                         className="text-sm md:text-xl text-slate-600"
                     >
-                        Discover how I can help your business grow with premium web solutions.
+                        {config.servicesSubheading}
                     </motion.p>
                 </div>
                 
@@ -48,6 +48,21 @@ const Services = () => {
                         </motion.div>
                     ))}
                 </div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 }}
+                    className="mt-8 lg:mt-12 text-center"
+                >
+                    <a
+                        href="#pricing"
+                        className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl border border-blue-500 text-blue-600 text-sm font-medium hover:bg-blue-50 transition-colors"
+                    >
+                        See Pricing for These Services →
+                    </a>
+                </motion.div>
             </div>
         </section>
     );

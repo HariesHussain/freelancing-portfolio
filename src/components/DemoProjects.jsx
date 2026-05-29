@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { config } from '../config.jsx';
 
@@ -43,7 +43,7 @@ const DemoProjects = () => {
                             <div className="aspect-video overflow-hidden relative border-b border-slate-100">
                                 <img 
                                     src={project.image} 
-                                    alt={`${project.title} – Premium web project by Haries Hussain`}
+                                    alt={`${project.title} — Premium web project by Haries Hussain`}
                                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-in-out"
                                     loading="lazy"
                                     width="800"
@@ -58,9 +58,22 @@ const DemoProjects = () => {
                                     <h3 className="text-[13px] sm:text-xl lg:text-2xl font-bold mb-1 sm:mb-3 lg:mb-4 text-slate-900 group-hover:text-blue-600 transition-colors duration-300 line-clamp-1 sm:line-clamp-none">
                                         {project.title}
                                     </h3>
+                                    <p className="text-[10px] sm:text-xs lg:text-sm text-slate-500 italic mb-2 sm:mb-3">
+                                        {project.problemSolution}
+                                    </p>
                                     <p className="text-slate-600 text-[10px] sm:text-sm lg:text-base mb-3 sm:mb-6 lg:mb-8 leading-snug sm:leading-relaxed line-clamp-2 sm:line-clamp-none">
                                         {project.description}
                                     </p>
+                                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-6">
+                                        {project.results?.map((result) => (
+                                            <span
+                                                key={result}
+                                                className="text-xs bg-green-50 text-green-700 border border-green-200 rounded-full px-2 py-0.5"
+                                            >
+                                                {result}
+                                            </span>
+                                        ))}
+                                    </div>
                                 </div>
                                 <a 
                                     href={project.demoLink}
