@@ -77,8 +77,10 @@ const Hero = () => {
             className="w-[36%] lg:w-[35%] flex justify-end relative shrink-0"
           >
             <div className="relative w-full max-w-[130px] xs:max-w-[160px] sm:max-w-[220px] md:max-w-[280px] lg:max-w-[380px] xl:max-w-[400px] 2xl:max-w-[440px] 3xl:max-w-[480px] 4xl:max-w-[520px]">
+              {/* Gentle blue glow effect behind hero profile photo */}
+              <div className="absolute inset-0 bg-blue-500/10 rounded-2xl xs:rounded-[2rem] lg:rounded-[2.5rem] blur-3xl -translate-x-2 -translate-y-2 pointer-events-none scale-105" />
               {/* Image Container with Elegant Rounded Corners */}
-              <div className="rounded-2xl xs:rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden border border-slate-200/80 shadow-[0_10px_30px_rgba(0,0,0,0.06)] lg:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.12)] bg-white aspect-[4/5]">
+              <div className="rounded-2xl xs:rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden border border-slate-200/80 shadow-[0_10px_30px_rgba(0,0,0,0.06)] lg:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.12)] bg-white aspect-[4/5] relative z-10">
                 <img
                   src="/hero-profile.png"
                   alt="Haries Hussain — Web Developer"

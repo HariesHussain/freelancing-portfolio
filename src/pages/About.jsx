@@ -86,7 +86,12 @@ const About = () => {
           </div>
         </section>
 
-        <section className="section-shell bg-slate-50">
+        <section 
+          className="section-shell bg-slate-50 border-b border-blue-500/5"
+          style={{
+            background: 'radial-gradient(circle at 10% 20%, rgba(239, 246, 255, 0.8) 0%, rgba(248, 250, 252, 0) 60%), #f8fafc'
+          }}
+        >
           <div className="section-container max-w-4xl">
             <motion.h2 initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-heading text-center mb-8">My Story</motion.h2>
             <div className="space-y-4 text-sm md:text-base text-slate-600 leading-relaxed">
@@ -103,7 +108,12 @@ const About = () => {
           </div>
         </section>
 
-        <section className="section-shell bg-white">
+        <section 
+          className="section-shell bg-white border-b border-blue-500/5"
+          style={{
+            background: 'radial-gradient(circle at 90% 20%, rgba(239, 246, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%), #ffffff'
+          }}
+        >
           <div className="section-container">
             <h2 className="section-heading text-center mb-4">Technologies I Use</h2>
             <p className="section-subtext text-center mb-10">A practical stack focused on performance, SEO, and easy maintenance.</p>
@@ -117,7 +127,12 @@ const About = () => {
           </div>
         </section>
 
-        <section className="section-shell bg-slate-50">
+        <section 
+          className="section-shell bg-slate-50 border-b border-blue-500/5"
+          style={{
+            background: 'radial-gradient(circle at 50% 50%, rgba(239, 246, 255, 0.8) 0%, rgba(248, 250, 252, 0) 60%), #f8fafc'
+          }}
+        >
           <div className="section-container">
             <h2 className="section-heading text-center mb-4">What I Believe In</h2>
             <p className="section-subtext text-center mb-10">Simple principles that keep every project clear, effective, and client-friendly.</p>

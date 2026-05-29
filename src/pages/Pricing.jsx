@@ -116,6 +116,7 @@ const Pricing = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   className={`base-card relative ${plan.popular ? 'ring-2 ring-blue-600/80 shadow-[0_20px_40px_rgba(37,99,235,0.06)] md:scale-102 hover:md:scale-103' : ''}`}
+                  style={plan.popular ? { background: 'linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%)' } : undefined}
                 >
                   {plan.popular && (
                     <span className="absolute -top-3 right-5 rounded-full bg-blue-600 text-white px-3 py-1 text-xs font-bold">POPULAR</span>

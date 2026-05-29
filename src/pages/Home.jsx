@@ -58,7 +58,12 @@ const Home = () => {
         <StatsBar />
 
         {/* 2. Services Preview (3 featured services) */}
-        <section className="py-20 md:py-24 bg-white relative overflow-hidden">
+        <section 
+          className="py-20 md:py-24 bg-white relative overflow-hidden border-b border-blue-500/5"
+          style={{
+            background: 'radial-gradient(circle at 10% 20%, rgba(239, 246, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%), #ffffff'
+          }}
+        >
           <div className="section-container relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-blue-600 font-bold text-xs md:text-sm uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Services Preview</span>
@@ -105,7 +110,12 @@ const Home = () => {
         </section>
 
         {/* 3. Featured Projects Preview */}
-        <section className="py-20 md:py-24 bg-slate-50 relative overflow-hidden">
+        <section 
+          className="py-20 md:py-24 bg-slate-50 relative overflow-hidden border-b border-blue-500/5"
+          style={{
+            background: 'radial-gradient(circle at 90% 80%, rgba(239, 246, 255, 0.7) 0%, rgba(248, 250, 252, 0) 60%), #f8fafc'
+          }}
+        >
           <div className="section-container relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-blue-600 font-bold text-xs md:text-sm uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Our Work</span>
@@ -164,7 +174,12 @@ const Home = () => {
         </section>
 
         {/* 4. Why Choose Me Section (integrated here as a trust-building block) */}
-        <section className="py-20 md:py-24 bg-white relative overflow-hidden">
+        <section 
+          className="py-20 md:py-24 bg-white relative overflow-hidden border-b border-blue-500/5"
+          style={{
+            background: 'radial-gradient(circle at 50% 50%, rgba(239, 246, 255, 0.4) 0%, rgba(255, 255, 255, 0) 80%), #ffffff'
+          }}
+        >
           <div className="section-container relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-blue-600 font-bold text-xs md:text-sm uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Core Principles</span>
@@ -196,7 +211,12 @@ const Home = () => {
         </section>
 
         {/* 5. Testimonials Section (reviews) */}
-        <section className="py-20 md:py-24 bg-slate-50 relative overflow-hidden">
+        <section 
+          className="py-20 md:py-24 bg-slate-50 relative overflow-hidden border-b border-blue-500/5"
+          style={{
+            background: 'radial-gradient(circle at 10% 90%, rgba(239, 246, 255, 0.7) 0%, rgba(248, 250, 252, 0) 60%), #f8fafc'
+          }}
+        >
           <div className="section-container relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-blue-600 font-bold text-xs md:text-sm uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Social Proof</span>

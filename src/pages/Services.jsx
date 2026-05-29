@@ -175,7 +175,15 @@ const Services = () => {
         </section>
 
         {services.map((service, index) => (
-          <section key={service.title} className={`section-shell ${index % 2 === 0 ? 'bg-slate-50' : 'bg-white'} py-16 md:py-20`}>
+          <section 
+            key={service.title} 
+            className={`section-shell ${index % 2 === 0 ? 'bg-slate-50' : 'bg-white'} py-16 md:py-20 border-b border-blue-500/5`}
+            style={{
+              background: index % 2 === 0 
+                ? 'radial-gradient(circle at 10% 30%, rgba(239, 246, 255, 0.8) 0%, rgba(248, 250, 252, 0) 60%), #f8fafc'
+                : 'radial-gradient(circle at 90% 30%, rgba(239, 246, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%), #ffffff'
+            }}
+          >
             <div className="section-container">
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
