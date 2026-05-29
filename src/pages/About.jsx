@@ -59,8 +59,8 @@ const About = () => {
                 viewport={{ once: true }}
                 className="w-[60%] lg:w-3/5 text-left"
               >
-                <h1 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-5xl font-extrabold text-slate-900 mb-2 xs:mb-4">Hi, I&apos;m Haries Hussain 👋</h1>
-                <p className="text-[10px] xs:text-xs sm:text-sm md:text-base text-slate-600 mb-4 xs:mb-6 max-w-2xl">
+                <h1 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-5xl 3xl:text-6xl font-extrabold text-slate-900 mb-2 xs:mb-4">Hi, I&apos;m Haries Hussain 👋</h1>
+                <p className="text-[10px] xs:text-xs sm:text-sm md:text-base text-slate-600 mb-4 xs:mb-6 max-w-2xl 3xl:max-w-3xl 4xl:max-w-4xl">
                   A web developer from Nandyal helping local businesses get online with fast, beautiful, affordable websites.
                 </p>
                 <div className="flex flex-wrap gap-2 xs:gap-3 justify-start">
@@ -79,7 +79,7 @@ const About = () => {
                 <img
                   src="/hero-profile.png"
                   alt="Haries Hussain profile"
-                  className="w-full max-w-[130px] xs:max-w-[160px] sm:max-w-[220px] md:max-w-[280px] lg:max-w-[360px] rounded-2xl border border-slate-200 shadow-sm"
+                  className="w-full max-w-[130px] xs:max-w-[160px] sm:max-w-[220px] md:max-w-[280px] lg:max-w-[360px] 2xl:max-w-[400px] 3xl:max-w-[450px] 4xl:max-w-[500px] rounded-2xl border border-slate-200 shadow-sm"
                 />
               </motion.div>
             </div>

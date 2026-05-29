@@ -40,14 +40,14 @@ const Hero = () => {
             </div>
 
             {/* Headline */}
-            <h1 className="text-sm xs:text-base sm:text-2xl md:text-3xl lg:text-[clamp(2.25rem,4.2vw,3.75rem)] font-extrabold tracking-tight leading-[1.2] text-slate-900 mb-2 xs:mb-4 sm:mb-6 w-full max-w-[620px]">
+            <h1 className="text-sm xs:text-base sm:text-2xl md:text-3xl lg:text-[clamp(2.25rem,4.2vw,3.75rem)] font-extrabold tracking-tight leading-[1.2] text-slate-900 mb-2 xs:mb-4 sm:mb-6 w-full max-w-[620px] 2xl:max-w-[720px] 3xl:max-w-[800px] 4xl:max-w-[900px]">
               <span className="bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                 High-Converting Websites<br className="hidden md:inline" /> for Growing Businesses
               </span>
             </h1>
 
             {/* Paragraph */}
-            <p className="text-[10px] xs:text-xs sm:text-sm md:text-base lg:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 mb-4 xs:mb-6 sm:mb-8 leading-relaxed">
+            <p className="text-[10px] xs:text-xs sm:text-sm md:text-base lg:text-lg text-slate-600 max-w-xl 2xl:max-w-2xl 3xl:max-w-3xl mx-auto lg:mx-0 mb-4 xs:mb-6 sm:mb-8 leading-relaxed">
               I design and develop modern websites that build credibility, generate leads, and help businesses stand out in a competitive market.
             </p>
 
@@ -76,7 +76,7 @@ const Hero = () => {
             transition={{ duration: 0.65, delay: 0.15 }}
             className="w-[36%] lg:w-[35%] flex justify-end relative shrink-0"
           >
-            <div className="relative w-full max-w-[130px] xs:max-w-[160px] sm:max-w-[220px] md:max-w-[280px] lg:max-w-[380px] xl:max-w-[400px]">
+            <div className="relative w-full max-w-[130px] xs:max-w-[160px] sm:max-w-[220px] md:max-w-[280px] lg:max-w-[380px] xl:max-w-[400px] 2xl:max-w-[440px] 3xl:max-w-[480px] 4xl:max-w-[520px]">
               {/* Image Container with Elegant Rounded Corners */}
               <div className="rounded-2xl xs:rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden border border-slate-200/80 shadow-[0_10px_30px_rgba(0,0,0,0.06)] lg:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.12)] bg-white aspect-[4/5]">
                 <img

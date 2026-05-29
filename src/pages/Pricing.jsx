@@ -108,7 +108,7 @@ const Pricing = () => {
 
         <section className="section-shell bg-slate-50">
           <div className="section-container">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 2xl:gap-10 3xl:gap-12">
               {plans.map((plan) => (
                 <motion.article
                   key={plan.name}
@@ -181,7 +181,7 @@ const Pricing = () => {
         </section>
 
         <section className="section-shell bg-white">
-          <div className="section-container max-w-4xl">
+          <div className="section-container max-w-4xl 2xl:max-w-5xl 3xl:max-w-6xl">
             <h2 className="section-heading text-center mb-12">Pricing FAQ</h2>
             <div className="space-y-4">
               {faqs.map((item) => (

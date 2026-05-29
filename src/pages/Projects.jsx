@@ -23,7 +23,7 @@ const Projects = () => {
 
         <section className="section-shell bg-slate-50">
           <div className="section-container">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 2xl:gap-10 3xl:gap-12">
               {config.demoProjects.map((project, index) => (
                 <motion.article
                   key={project.title}

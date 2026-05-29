@@ -2,6 +2,8 @@
 
 @theme {
   --breakpoint-xs: 475px;
+  --breakpoint-3xl: 1600px;
+  --breakpoint-4xl: 1920px;
 }
 
 @layer base {
@@ -50,7 +52,7 @@
   }
 
   .section-container {
-    @apply max-w-7xl mx-auto px-4 md:px-8 lg:px-16;
+    @apply max-w-7xl 2xl:max-w-[1360px] 3xl:max-w-[1536px] 4xl:max-w-[1728px] mx-auto px-4 md:px-8 lg:px-16;
   }
 
   .section-heading {
@@ -58,7 +60,7 @@
   }
 
   .section-subtext {
-    @apply text-sm md:text-base text-slate-600 max-w-2xl mx-auto;
+    @apply text-sm md:text-base text-slate-600 max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto;
   }
 
   .base-card {

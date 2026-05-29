@@ -95,7 +95,7 @@ const Contact = () => {
 
         <section className="section-shell bg-slate-50">
           <div className="section-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 2xl:gap-12 3xl:gap-16">
               <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="base-card">
                 {status === 'success' ? (
                   <div className="text-center bg-green-50 border border-green-200 rounded-xl p-6">

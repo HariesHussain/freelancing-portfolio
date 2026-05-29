@@ -181,7 +181,7 @@ const Services = () => {
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start"
+                className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 3xl:gap-16 4xl:gap-20 items-start"
               >
                 <div className={`${index % 2 !== 0 ? 'lg:order-2' : ''}`}>
                   <span className="inline-flex items-center justify-center bg-blue-50 rounded-xl p-3 mb-4 text-2xl">{service.icon}</span>
@@ -231,7 +231,7 @@ const Services = () => {
         ))}
 
         <section className="section-shell bg-slate-50">
-          <div className="section-container max-w-4xl">
+          <div className="section-container max-w-4xl 2xl:max-w-5xl 3xl:max-w-6xl">
             <h2 className="section-heading text-center mb-12">Services FAQ</h2>
             <div className="space-y-4">
               {faqItems.map((item, idx) => (
