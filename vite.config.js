@@ -85,9 +85,6 @@ Disallow: /dist/
 Disallow: /node_modules/
 Disallow: /temp/
 Disallow: /tmp/
-Disallow: /*.config.js
-Disallow: /*.json
-Disallow: /*.log
 
 # XML Sitemap Location
 Sitemap: ${siteUrl}/sitemap.xml`;
