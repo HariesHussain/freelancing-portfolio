@@ -44,9 +44,9 @@ const Home = () => {
   return (
     <>
       <SEOHead
-        title="Premium Web Agency | Custom Web Development"
-        description="We build high-converting, premium, custom websites for startups and corporate businesses in 7 days."
-        keywords="web design agency, custom website developer, speed optimized portfolio, local seo nandyal"
+        title="Haries Hussain | Premium Web Development Agency in Nandyal"
+        description="Custom website development for businesses in India. High-converting, mobile-first websites with built-in SEO, delivered in 7 days. Business websites, landing pages, and portfolio websites starting at ₹2,999."
+        keywords="website developer in Nandyal, custom website development India, business website design, affordable website development, freelance web developer Nandyal, website development near me, Haries Hussain"
         canonical="https://harieshussain.tech"
       />
 
@@ -81,7 +81,7 @@ const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="bg-white border border-slate-200/70 p-6 lg:p-8 rounded-[1.75rem] shadow-[0_8px_30px_rgba(15,23,42,0.02)] hover:shadow-[0_16px_40px_rgba(15,23,42,0.05)] hover:-translate-y-1 hover:border-blue-500/20 transition-all duration-300 group flex flex-col justify-between"
+                  className="base-card group flex flex-col justify-between"
                 >
                   <div>
                     <div className="mb-4 lg:mb-6 p-3 bg-slate-50 border border-slate-100 text-blue-600 rounded-xl inline-block group-hover:bg-blue-50 group-hover:scale-105 transition-all duration-300">
@@ -101,7 +101,7 @@ const Home = () => {
             <div className="text-center">
               <Link
                 to="/services"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-slate-200 text-slate-800 font-bold hover:bg-slate-50 hover:border-slate-300 transition-all duration-200 text-sm md:text-base shadow-xs"
+                className="btn-outline gap-2 text-sm md:text-base px-6 py-3.5"
               >
                 View All Services <HiArrowRight className="w-4 h-4 text-slate-600" />
               </Link>
@@ -126,19 +126,22 @@ const Home = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              {config.demoProjects.slice(0, 2).map((project, index) => (
+              {[
+                config.demoProjects.find(p => p.title === "Nandyal Cafe"),
+                config.demoProjects.find(p => p.title === "FitGenie")
+              ].filter(Boolean).map((project, index) => (
                 <motion.article
                   key={project.title}
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="bg-white border border-slate-200/70 rounded-[2rem] lg:rounded-[2.25rem] overflow-hidden shadow-[0_8px_30px_rgba(15,23,42,0.02)] hover:shadow-[0_20px_50px_rgba(15,23,42,0.06)] hover:-translate-y-1 hover:border-slate-300/80 transition-all duration-300 flex flex-col group animate-fadeIn"
+                  className="bg-white border border-slate-200/60 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(15,23,42,0.02)] hover:shadow-[0_16px_40px_rgba(15,23,42,0.04)] hover:border-blue-500/20 hover:-translate-y-1 transition-all duration-300 flex flex-col group animate-fadeIn"
                 >
                   <div className="aspect-video overflow-hidden border-b border-slate-100 relative">
                     <img
                       src={project.image}
-                      alt={project.title}
+                      alt={`${project.title} — website built by Haries Hussain`}
                       className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                       loading="lazy"
                     />
@@ -153,7 +156,7 @@ const Home = () => {
                       href={project.demoLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-900 text-white font-bold rounded-xl hover:bg-blue-600 transition-all duration-200 shadow-sm text-sm w-fit mt-auto"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-900 text-white font-bold rounded-xl hover:bg-blue-600 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-sm hover:shadow-md text-sm w-fit mt-auto focus:outline-none focus:ring-2 focus:ring-slate-500/20"
                     >
                       Preview Live Project
                     </a>
@@ -165,7 +168,7 @@ const Home = () => {
             <div className="text-center">
               <Link
                 to="/projects"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-slate-200 text-slate-800 font-bold hover:bg-slate-50 hover:border-slate-300 transition-all duration-200 text-sm md:text-base shadow-xs"
+                className="btn-outline gap-2 text-sm md:text-base px-6 py-3.5"
               >
                 View All Projects <HiArrowRight className="w-4 h-4 text-slate-600" />
               </Link>
@@ -197,7 +200,7 @@ const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="bg-slate-50/50 border border-slate-200/50 p-6 md:p-8 rounded-[1.75rem] shadow-[0_4px_20px_rgba(15,23,42,0.01)] hover:shadow-[0_12px_30px_rgba(15,23,42,0.03)] hover:bg-white hover:border-blue-500/10 hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-start group"
+                  className="bg-slate-50/50 border border-slate-200/60 p-6 md:p-8 rounded-2xl shadow-[0_8px_30px_rgba(15,23,42,0.02)] hover:shadow-[0_16px_40px_rgba(15,23,42,0.04)] hover:bg-white hover:border-blue-500/20 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-start group"
                 >
                   <div className="mb-5 p-3 bg-white text-blue-600 border border-slate-200/50 rounded-xl inline-block w-fit group-hover:bg-blue-50 group-hover:scale-105 transition-all duration-300">
                     {React.cloneElement(pillar.icon, { className: 'w-6 h-6 text-blue-600' })}
@@ -234,7 +237,7 @@ const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="bg-white border border-slate-200/70 p-6 md:p-8 rounded-[1.75rem] shadow-[0_8px_30px_rgba(15,23,42,0.02)] hover:shadow-[0_16px_40px_rgba(15,23,42,0.04)] hover:-translate-y-0.5 transition-all duration-300 relative flex flex-col justify-between"
+                  className="base-card relative flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex gap-1 text-amber-500 mb-4">
@@ -274,7 +277,7 @@ const Home = () => {
             <div className="flex justify-center gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700 transition-all duration-200 shadow-md text-sm md:text-base"
+                className="btn-primary px-8 py-3.5 text-sm md:text-base"
               >
                 Start Your Project
               </Link>
@@ -282,7 +285,7 @@ const Home = () => {
                 href="https://wa.me/919391175096"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-whatsapp px-8 py-3.5 rounded-xl font-bold shadow-md"
+                className="btn-whatsapp px-8 py-3.5"
               >
                 Chat on WhatsApp
               </a>

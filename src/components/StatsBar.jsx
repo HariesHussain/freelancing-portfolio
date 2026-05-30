@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { animate, motion, useInView } from 'framer-motion';
 
 const statItems = [
-    { value: 4, suffix: '+', label: 'Projects' },
+    { value: 6, suffix: '+', label: 'Projects' },
     { value: 100, suffix: '%', label: 'Satisfaction' },
     { value: 24, suffix: 'hr', label: 'Response' },
-    { value: 3, suffix: '+', label: 'Clients' }
+    { value: 5, suffix: '+', label: 'Clients' }
 ];
 
 const CountUp = ({ value, suffix, label, delay = 0 }) => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaPhone, FaMapPin, FaCheckCircle } from "react-icons/fa";
+import { blogPosts } from './blogData.jsx';
 import { 
     HiMail, 
     HiBriefcase, 
@@ -27,7 +28,7 @@ export const NAV_ITEMS = [
 
 export const config = {
     developer: {
-        name: "Haries",
+        name: "Haries Hussain",
     },
     social: {
     },
@@ -202,10 +203,28 @@ export const config = {
     ],
     demoProjects: [
         {
+            title: "Verma Dental Studio",
+            problemSolution: "Needed: Patient booking system | Built: Clinic website with schedule flow",
+            results: ["50%+ booking inquiries", "Delivered in 5 days", "Google Maps integrated"],
+            technologies: ["React", "Vite", "Tailwind CSS", "EmailJS"],
+            description: "A professional clinic website for Verma Dental Studio showcasing doctor profiles, treatment details, and patient booking inquiries.",
+            image: "/projects/dental-studio.png",
+            demoLink: "https://samee-dental-clinic.vercel.app/"
+        },
+        {
+            title: "Osmania School",
+            problemSolution: "Needed: Online brand visibility | Built: Responsive school website",
+            results: ["Improved admission inquiries", "Delivered in 8 days", "Interactive campus details"],
+            technologies: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
+            description: "A professional modern website for Osmania School showcasing academic programs, campus facilities, and admission queries for parents.",
+            image: "/projects/school-website.png",
+            demoLink: "https://osmania-school.vercel.app/"
+        },
+        {
             title: "Nandyal Cafe",
             problemSolution: "Needed: Online menu visibility | Built: Full restaurant website",
             results: ["PageSpeed 94/100", "Delivered in 4 days", "WhatsApp integrated"],
-            technologies: ["React", "Vite", "Tailwind CSS", "Google Maps", "Hostinger"],
+            technologies: ["React", "Vite", "Tailwind CSS", "Google Maps", "Vercel"],
             description: "An authentic vintage Irani Cafe website showcasing traditional flavors, menu exploration, and rich historic aesthetics.",
             image: "/projects/nandyal-cafe.png",
             demoLink: "https://nandyal-cafe.vercel.app/"
@@ -257,7 +276,8 @@ export const config = {
             value: "India",
             link: null
         }
-    ]
+    ],
+    blogPosts
 };
 
 

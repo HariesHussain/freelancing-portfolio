@@ -1,8 +1,29 @@
-# robots.txt — Haries Hussain Portfolio
-# Generated dynamically by Vite plug-in from seo.config.js
-User-agent: *
-Allow: /
-Disallow: /assets/
+# ============================================================
+# robots.txt — Production Search Engine Instructions
+# ============================================================
+# Website: https://harieshussain.tech
+# Target: Search engine crawlers and indexing spiders
+# ============================================================
 
-# Sitemap
+User-agent: *
+
+# Crawl Allowances
+Allow: /
+Allow: /blog/
+Allow: /services/
+Allow: /projects/
+Allow: /pricing/
+Allow: /about/
+Allow: /contact/
+
+# Block Development & Temporary Files
+Disallow: /dist/
+Disallow: /node_modules/
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /*.config.js
+Disallow: /*.json
+Disallow: /*.log
+
+# XML Sitemap Location
 Sitemap: https://harieshussain.tech/sitemap.xml

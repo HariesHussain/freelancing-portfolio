@@ -8,8 +8,8 @@ const Projects = () => {
     <>
       <SEOHead
         title="Web Design Projects | Haries Hussain Portfolio"
-        description="Real website projects built for local businesses with clear outcomes like speed improvements, lead generation and fast delivery."
-        keywords="web design projects nandyal, local business website portfolio"
+        description="View real website projects designed and developed for local businesses in India — dental clinics, schools, cafes, fitness platforms, and more. Built with React, optimized for speed and Google rankings."
+        keywords="web design portfolio India, website projects Nandyal, business website examples, restaurant website design, school website development, clinic website design, React website portfolio, Haries Hussain projects"
         canonical="https://harieshussain.tech/projects"
       />
 
@@ -33,10 +33,10 @@ const Projects = () => {
                   transition={{ delay: index * 0.06 }}
                   className="base-card"
                 >
-                  <div className="rounded-[1.25rem] overflow-hidden border border-slate-200/60 shadow-xs mb-5">
+                  <div className="rounded-xl overflow-hidden border border-slate-200/50 shadow-xs mb-5">
                     <img
                       src={project.image}
-                      alt={`${project.title} project screenshot`}
+                      alt={`${project.title} — website designed by Haries Hussain`}
                       className="w-full h-auto object-cover"
                       loading="lazy"
                     />

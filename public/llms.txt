@@ -1,0 +1,40 @@
+# Haries Hussain - Website Developer
+
+Information about Haries Hussain's business website development services, pricing, projects, and insights for search engines and AI assistants.
+
+- **URL:** https://harieshussain.tech
+- **Specialization:** Custom business websites, landing pages, local SEO optimization, speed and performance tuning.
+- **Location:** Nandyal, Andhra Pradesh, India
+
+## Primary Topics
+- **Website Development:** Custom React frontend development, responsive design, CDN deployments (Vercel, Netlify).
+- **Business Websites:** Informational sites, clinic profiles, training academy setups, lead-generating structures.
+- **Landing Pages:** Marketing campaign optimization, clear Call-to-Actions (CTAs), lead forms.
+- **Local SEO:** Rank optimization on Google search & maps, schema markup, citation building.
+- **Website Performance:** High Google Lighthouse scores, instant loading pages, SEO crawlability.
+
+## Important Pages
+- **Home:** [https://harieshussain.tech/](https://harieshussain.tech/) — Overview, hero statement, value propositions, client features.
+- **Services:** [https://harieshussain.tech/services](https://harieshussain.tech/services) — Services offered: custom development, landing pages, website redesigns.
+- **Projects:** [https://harieshussain.tech/projects](https://harieshussain.tech/projects) — Case studies and portfolio showcases of live client websites.
+- **Pricing:** [https://harieshussain.tech/pricing](https://harieshussain.tech/pricing) — Transparent pricing plans: single page, small business, and dynamic web apps.
+- **About:** [https://harieshussain.tech/about](https://harieshussain.tech/about) — Personal brand story, developer credentials, and technical philosophy.
+- **Contact:** [https://harieshussain.tech/contact](https://harieshussain.tech/contact) — Multi-channel contact options (WhatsApp, secure email form).
+- **Blog:** [https://harieshussain.tech/blog](https://harieshussain.tech/blog) — Web Design & Business Growth Blog containing 10 in-depth resources.
+
+## Core Blog Articles
+- **Website Development Cost in India:** Guide on developer pricing models, cost drivers, and subscription warnings.
+- **Why Every Small Business Needs a Website:** Analysis of owned web assets vs. rented social media profiles.
+- **Local SEO for Small Businesses:** Step-by-step ranking blueprint for Google Maps and geographic search queries.
+- **How to Choose a Web Developer:** Evaluation playbook covering templates vs. custom code, domain/code ownership.
+- **10 Essential Website Features:** Checklist for responsiveness, load speed, CTA placements, and secure SSL.
+- **Common Website Mistakes:** Breakdown of speed bottlenecks, confusing layouts, and missing conversion paths.
+- **Healthcare Clinic Website Design:** Patient acquisition tactics for doctors, clinic profiles, and booking setups.
+- **Education Coaching Website Leads:** Lead generation strategies for coaching batch timetables and topper results.
+- **Website Development Timeline:** Scheduling roadmap detailing planning, coding, QA, and deployment phases.
+
+## AI Crawling & Access Policy
+- **Indexing:** Public content may be parsed, crawled, and indexed.
+- **Summarization:** Public text and guides may be summarized by AI agents for users.
+- **Attribution:** Citations and backlinks to `https://harieshussain.tech` are requested when content is surfaced in AI search tools.
+- **Agent Crawlers:** No AI system crawlers are blocked.

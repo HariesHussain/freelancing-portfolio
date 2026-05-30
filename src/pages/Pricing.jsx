@@ -84,7 +84,27 @@ const faqs = [
   { q: 'Can I upgrade my plan later?', a: 'Yes, you can always upgrade' },
   {
     q: 'Is domain and hosting included?',
-    a: 'Not included. I\'ll help you set it up (Hostinger recommended, ~₹3,000/year)'
+    a: 'Hosting and domain fees are charged separately. However, I handle the complete deployment, secure domain connection, and hosting setup to ensure your website is live and running smoothly.'
+  },
+  {
+    q: 'Where do you host the websites you build?',
+    a: 'Depending on project requirements, I typically deploy websites using modern hosting platforms such as Vercel and Netlify to ensure fast performance, security, reliability, and global availability.'
+  },
+  {
+    q: 'How much does a 5-page business website cost?',
+    a: 'A standard 5-page responsive business website with SEO, contact forms, and Google Maps starts at ₹6,999 with the Standard plan. This includes mobile-first design, on-page SEO, and 30 days of post-launch support.'
+  },
+  {
+    q: 'Is a React website better than template builders for my business?',
+    a: 'React websites load significantly faster, rank better on Google, and offer superior mobile performance. While templates are popular, custom React-based sites deliver better Core Web Vitals scores and require less maintenance.'
+  },
+  {
+    q: 'What is the difference between a cheap website and a professional one?',
+    a: 'A cheap template website may look generic and load slowly, hurting your Google rankings. A professional custom website is designed for your brand, optimized for speed, built for mobile, and structured for SEO to actually generate leads.'
+  },
+  {
+    q: 'How long does website development take?',
+    a: 'A single landing page takes 3-5 days. A 5-page business website takes 7-10 days. A full 10-page website with advanced SEO takes 10-14 days. Timeline starts after requirements are finalized.'
   }
 ];
 
@@ -92,10 +112,11 @@ const Pricing = () => {
   return (
     <>
       <SEOHead
-        title="Website Design Pricing Nandyal | ₹2,999 onwards"
-        description="Simple Pricing. No Hidden Costs. Honest prices for quality websites from ₹2,999 to ₹12,999."
-        keywords="website pricing Nandyal, web design price india, freelance web developer pricing"
+        title="Website Design Pricing | Haries Hussain — ₹2,999 Onwards"
+        description="Transparent website development pricing in India. Business websites from ₹2,999 to ₹12,999 with no hidden costs. Compare Basic, Standard, and Premium plans for small businesses, clinics, and startups."
+        keywords="website development cost India, website design price, affordable website India, cheap website for small business, freelance web developer pricing, website cost Nandyal, how much does a website cost India"
         canonical="https://harieshussain.tech/pricing"
+        faqData={faqs}
       />
 
       <main>
@@ -158,12 +179,12 @@ const Pricing = () => {
             <h2 className="section-heading text-center mb-12">Plan Comparison</h2>
             <div className="overflow-x-auto base-card p-0">
               <table className="min-w-full text-sm md:text-base">
-                <thead className="bg-slate-100">
+                <thead className="bg-slate-50 border-b border-slate-200/60">
                   <tr>
-                    <th className="text-left p-4 font-semibold text-slate-800">Feature</th>
-                    <th className="text-left p-4 font-semibold text-slate-800">Basic</th>
-                    <th className="text-left p-4 font-semibold text-slate-800">Standard</th>
-                    <th className="text-left p-4 font-semibold text-slate-800">Premium</th>
+                    <th className="text-left p-4 font-bold text-slate-900">Feature</th>
+                    <th className="text-left p-4 font-bold text-slate-900">Basic</th>
+                    <th className="text-left p-4 font-bold text-slate-900">Standard</th>
+                    <th className="text-left p-4 font-bold text-slate-900">Premium</th>
                   </tr>
                 </thead>
                 <tbody>

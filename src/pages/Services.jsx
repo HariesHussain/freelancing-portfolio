@@ -11,14 +11,14 @@ const services = [
     who: 'Companies needing visual mockups, corporate branding refreshes, startups planning new platforms.',
     includes: [
       'Custom UI/UX layout design',
-      'Figma source files delivered',
+      'Source design layout files delivered',
       'High-fidelity page mockups',
       'Harmonious typography & color palettes',
       'Interactive user journey wireframes'
     ],
     process: [
       'Brand research & wireframing',
-      'Interactive design mockups in Figma',
+      'Interactive layout and design mockups',
       'Review, styling adjustments, and asset handoff'
     ],
     delivery: '4-6 days',
@@ -148,11 +148,31 @@ const faqItems = [
   },
   {
     q: 'Is hosting and domain included?',
-    a: 'Hosting and domain setup are charged separately. I will help you set up and map your custom domains securely on platforms like Vercel or Hostinger.'
+    a: 'Hosting and domain fees are charged separately. However, I handle the complete deployment, secure domain connection, and hosting setup to ensure your website is live and running smoothly.'
+  },
+  {
+    q: 'Where do you host the websites you build?',
+    a: 'Depending on project requirements, I typically deploy websites using modern hosting platforms such as Vercel and Netlify to ensure fast performance, security, reliability, and global availability.'
   },
   {
     q: 'How are revision rounds managed?',
     a: 'Every project comes with 3 dedicated rounds of design and code reviews. We check mockups and interactive setups together before going live.'
+  },
+  {
+    q: 'Do you build SEO-friendly websites?',
+    a: 'Yes. Every website includes semantic HTML, meta tags, sitemap generation, and Core Web Vitals optimization as standard. Advanced SEO setup with Google Search Console and Analytics is available in the Premium plan.'
+  },
+  {
+    q: 'Can you build an ecommerce or online store website?',
+    a: 'We specialize in service-based business websites and landing pages. For basic product showcases with inquiry forms, we can build custom solutions. For full ecommerce with payment gateways, we recommend our Premium plan.'
+  },
+  {
+    q: 'Do you offer website maintenance after launch?',
+    a: 'Yes. We offer monthly website maintenance plans starting at ₹1,999/month covering backups, speed checkups, security monitoring, and content updates so your website stays fast and secure.'
+  },
+  {
+    q: 'What technology stack do you use?',
+    a: 'We build websites using React, Vite, and Tailwind CSS for maximum speed and modern design. This stack delivers faster load times and better Google rankings compared to traditional template-based site builders.'
   }
 ];
 
@@ -160,10 +180,12 @@ const Services = () => {
   return (
     <>
       <SEOHead
-        title="Web Design Services | Custom Web Development"
-        description="Explore our range of web design and development services: Business Websites, Landing Pages, Website Redesigns, and Maintenance plans."
-        keywords="web design services india, business website design, portfolio website developer"
+        title="Web Design Services by Haries Hussain | Custom Web Development"
+        description="Professional website development services in Nandyal, India — custom business websites, landing page design, portfolio websites, website redesign, and SEO optimization. Affordable packages from ₹2,999."
+        keywords="website development services India, business website design, custom website development Nandyal, landing page design, website redesign services, portfolio website developer, affordable website India, SEO-friendly website development, React website development, freelance web developer India"
         canonical="https://harieshussain.tech/services"
+        schemaType="services"
+        faqData={faqItems}
       />
 
       <main>
@@ -227,7 +249,7 @@ const Services = () => {
                       href="https://wa.me/919391175096"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-whatsapp px-6 py-2.5 rounded-xl font-bold shadow-sm"
+                      className="btn-whatsapp px-6 py-2.5"
                     >
                       {service.cta}
                     </a>

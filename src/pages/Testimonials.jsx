@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import SEOHead from '../components/SEOHead';
 import { config } from '../config.jsx';
@@ -8,8 +8,8 @@ const Testimonials = () => {
     <>
       <SEOHead
         title="Client Testimonials | Haries Hussain"
-        description="Read real client feedback on website quality, communication, and delivery experience."
-        keywords="client testimonials web developer india, website client reviews"
+        description="Read verified client reviews from business owners who hired Haries Hussain for website design and development. Real feedback on quality, delivery speed, and communication."
+        keywords="web developer reviews India, client testimonials website developer, Haries Hussain reviews, website design reviews Nandyal, freelance developer feedback"
         canonical="https://harieshussain.tech/testimonials"
       />
 

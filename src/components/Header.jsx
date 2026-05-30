@@ -75,11 +75,18 @@ const Header = () => {
               transition={{ type: 'spring', damping: 25, stiffness: 220 }}
               className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl border-l border-slate-200 z-50 lg:hidden overflow-y-auto"
             >
-              <div className="p-6 pt-20 flex flex-col h-full">
-                <div className="mb-6">
-                  <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-bold text-slate-900">
+              <div className="p-6 pt-6 flex flex-col h-full">
+                <div className="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+                  <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-extrabold text-slate-900 tracking-tight">
                     {config.developer.name}
                   </Link>
+                  <button
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="p-2 -mr-2 text-slate-700 hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500/20 rounded-lg"
+                    aria-label="Close menu"
+                  >
+                    <HiX className="w-6 h-6" />
+                  </button>
                 </div>
 
                 <nav className="flex-1">

@@ -10,8 +10,6 @@ const skills = [
   'React',
   'Tailwind CSS',
   'Framer Motion',
-  'Figma',
-  'WordPress',
   'SEO Tools',
   'Google Analytics',
   'Git',
@@ -43,10 +41,11 @@ const About = () => {
   return (
     <>
       <SEOHead
-        title="About Haries Hussain | Web Developer Nandyal"
-        description="A web developer from Nandyal helping local businesses get online with fast, beautiful, affordable websites."
-        keywords="Haries Hussain, web developer Nandyal, local business websites"
+        title="About Haries Hussain | Freelance Web Developer in Nandyal, Andhra Pradesh"
+        description="Haries Hussain is a freelance web developer from Nandyal, Andhra Pradesh, specializing in fast, affordable, mobile-first business websites for small businesses, clinics, restaurants, and professionals across India."
+        keywords="Haries Hussain, Shaik Haries Hussain, Haries Hussain Shaik, Haries Shaik, Haris Hussain, web developer Nandyal, freelance web developer Andhra Pradesh, Haries Hussain Nandyal, about Haries Hussain"
         canonical="https://harieshussain.tech/about"
+        schemaType="about"
       />
 
       <main>
@@ -59,13 +58,13 @@ const About = () => {
                 viewport={{ once: true }}
                 className="w-[60%] lg:w-3/5 text-left"
               >
-                <h1 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-5xl 3xl:text-6xl font-extrabold text-slate-900 mb-2 xs:mb-4">Hi, I&apos;m Haries Hussain 👋</h1>
+                <h1 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-5xl 3xl:text-6xl font-extrabold text-slate-900 mb-2 xs:mb-4">Hi, I'm Haries Hussain 👋</h1>
                 <p className="text-[10px] xs:text-xs sm:text-sm md:text-base text-slate-600 mb-4 xs:mb-6 max-w-2xl 3xl:max-w-3xl 4xl:max-w-4xl">
-                  A web developer from Nandyal helping local businesses get online with fast, beautiful, affordable websites.
+                  A freelance web developer from Nandyal, Andhra Pradesh, helping local businesses get online with fast, beautiful, and affordable websites.
                 </p>
                 <div className="flex flex-wrap gap-2 xs:gap-3 justify-start">
-                  <Link to="/contact" className="btn-primary text-xs xs:text-sm px-4 py-2 xs:px-6 xs:py-3 rounded-lg xs:rounded-xl">Work With Me</Link>
-                  <Link to="/projects" className="btn-secondary text-xs xs:text-sm px-4 py-2 xs:px-6 xs:py-3 rounded-lg xs:rounded-xl">See My Work</Link>
+                  <Link to="/contact" className="btn-primary text-xs xs:text-sm px-4 py-2 xs:px-6 xs:py-3">Work With Me</Link>
+                  <Link to="/projects" className="btn-secondary text-xs xs:text-sm px-4 py-2 xs:px-6 xs:py-3">See My Work</Link>
                 </div>
               </motion.div>
 
@@ -78,7 +77,7 @@ const About = () => {
               >
                 <img
                   src="/hero-profile.png"
-                  alt="Haries Hussain profile"
+                  alt="Haries Hussain — Freelance Web Developer from Nandyal, Andhra Pradesh"
                   className="w-full max-w-[130px] xs:max-w-[160px] sm:max-w-[220px] md:max-w-[280px] lg:max-w-[360px] 2xl:max-w-[400px] 3xl:max-w-[450px] 4xl:max-w-[500px] rounded-2xl border border-slate-200 shadow-sm"
                 />
               </motion.div>
@@ -96,7 +95,7 @@ const About = () => {
             <motion.h2 initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-heading text-center mb-8">My Story</motion.h2>
             <div className="space-y-4 text-sm md:text-base text-slate-600 leading-relaxed">
               <p>
-                I&apos;m Haries, a web developer based in Nandyal. I started building websites because I noticed most local businesses around me had no online presence — or worse, outdated websites that drove customers away.
+                I'm Haries Hussain, a web developer based in Nandyal, Andhra Pradesh. I started building websites because I noticed most local businesses around me had no online presence — or worse, outdated websites that drove customers away.
               </p>
               <p>
                 I specialize in building clean, fast, mobile-friendly websites specifically for small businesses, coaches, restaurants, clinics, and professionals who need a strong online presence without paying agency prices.

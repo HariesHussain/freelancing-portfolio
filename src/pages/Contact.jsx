@@ -79,9 +79,9 @@ const Contact = () => {
   return (
     <>
       <SEOHead
-        title="Contact Haries Hussain | Web Developer Nandyal"
-        description="Let’s Build Your Website. Share your project details and get a response within 24 hours."
-        keywords="contact web developer Nandyal, whatsapp web developer"
+        title="Contact Haries Hussain | Freelance Web Developer Nandyal"
+        description="Ready to start your website project? Get in touch with Haries Hussain for a free consultation. Response within 24 hours. Based in Nandyal, Andhra Pradesh."
+        keywords="hire website developer India, get website built India, contact web developer Nandyal, freelance web developer near me, website development inquiry, Haries Hussain contact"
         canonical="https://harieshussain.tech/contact"
       />
 
@@ -98,10 +98,11 @@ const Contact = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 2xl:gap-12 3xl:gap-16">
               <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="base-card">
                 {status === 'success' ? (
-                  <div className="text-center bg-green-50 border border-green-200 rounded-xl p-6">
-                    <h2 className="text-xl font-bold text-green-800 mb-2">Thanks! Your request is received.</h2>
-                    <p className="text-sm md:text-base text-green-700 mb-4">I will reach out within 24 hours.</p>
-                    <button onClick={() => setStatus('idle')} className="btn-secondary">Send Another Request</button>
+                  <div className="text-center bg-green-50/50 border border-green-200/80 rounded-2xl p-6 md:p-8 shadow-xs">
+                    <div className="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">✓</div>
+                    <h2 className="text-xl font-bold text-green-900 mb-2">Message Sent Successfully!</h2>
+                    <p className="text-sm md:text-base text-green-700 mb-6 max-w-sm mx-auto">I have received your request and will get back to you within 24 hours.</p>
+                    <button onClick={() => setStatus('idle')} className="btn-secondary text-sm px-6 py-2.5">Send Another Message</button>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5" noValidate>
@@ -114,7 +115,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         disabled={status === 'loading'}
-                        className={`w-full rounded-xl border bg-slate-50 px-4 py-3 text-sm md:text-base focus:outline-none focus:ring-2 ${errors.name ? 'border-red-400 focus:ring-red-200' : 'border-slate-200 focus:ring-blue-200'}`}
+                        className={`w-full rounded-xl border bg-slate-50 px-4 py-3 text-sm md:text-base focus:outline-none focus:ring-2 transition-all duration-200 ${errors.name ? 'border-red-400 focus:ring-red-200' : 'border-slate-200 focus:ring-blue-200'}`}
                         placeholder="Your full name"
                       />
                       {errors.name && <p className="text-xs text-red-600">{errors.name}</p>}
@@ -129,8 +130,8 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         disabled={status === 'loading'}
-                        className={`w-full rounded-xl border bg-slate-50 px-4 py-3 text-sm md:text-base focus:outline-none focus:ring-2 ${errors.phone ? 'border-red-400 focus:ring-red-200' : 'border-slate-200 focus:ring-blue-200'}`}
-                        placeholder="+91 93911 75096"
+                        className={`w-full rounded-xl border bg-slate-50 px-4 py-3 text-sm md:text-base focus:outline-none focus:ring-2 transition-all duration-200 ${errors.phone ? 'border-red-400 focus:ring-red-200' : 'border-slate-200 focus:ring-blue-200'}`}
+                        placeholder="+91 12345 67890"
                       />
                       {errors.phone && <p className="text-xs text-red-600">{errors.phone}</p>}
                     </div>
@@ -151,7 +152,7 @@ const Contact = () => {
                             type="text"
                             value={formData.business}
                             onChange={handleChange}
-                            className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-200"
+                            className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-200 transition-all duration-200"
                             placeholder="Your business name"
                           />
                         </div>
@@ -164,7 +165,7 @@ const Contact = () => {
                             type="email"
                             value={formData.email}
                             onChange={handleChange}
-                            className={`w-full rounded-xl border bg-slate-50 px-4 py-3 text-sm md:text-base focus:outline-none focus:ring-2 ${errors.email ? 'border-red-400 focus:ring-red-200' : 'border-slate-200 focus:ring-blue-200'}`}
+                            className={`w-full rounded-xl border bg-slate-50 px-4 py-3 text-sm md:text-base focus:outline-none focus:ring-2 transition-all duration-200 ${errors.email ? 'border-red-400 focus:ring-red-200' : 'border-slate-200 focus:ring-blue-200'}`}
                             placeholder="name@example.com"
                           />
                           {errors.email && <p className="text-xs text-red-600">{errors.email}</p>}
@@ -178,7 +179,7 @@ const Contact = () => {
                             rows="4"
                             value={formData.message}
                             onChange={handleChange}
-                            className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-200"
+                            className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-200 transition-all duration-200"
                             placeholder="Tell me what you need..."
                           />
                         </div>
@@ -192,13 +193,22 @@ const Contact = () => {
                     </div>
 
                     {status === 'error' && (
-                      <p className="text-sm text-red-700 bg-red-50 border border-red-200 rounded-xl p-3">
-                        Couldn&apos;t send right now. Please try again or use WhatsApp.
-                      </p>
+                      <div className="flex items-center gap-2.5 text-sm text-red-800 bg-red-50 border border-red-200/80 rounded-xl p-3.5">
+                        <span className="text-lg shrink-0 select-none">⚠</span>
+                        <p className="leading-normal font-medium">Could not send your request. Please try again or contact me directly via WhatsApp.</p>
+                      </div>
                     )}
 
-                    <button type="submit" disabled={status === 'loading'} className="btn-primary w-full">
-                      {status === 'loading' ? 'Sending...' : 'Start Free Consultation'}
+                    <button type="submit" disabled={status === 'loading'} className="btn-primary w-full gap-2">
+                      {status === 'loading' ? (
+                        <>
+                          <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          Sending Inquiry...
+                        </>
+                      ) : 'Start Free Consultation'}
                     </button>
                   </form>
                 )}
@@ -208,7 +218,7 @@ const Contact = () => {
                 initial={{ opacity: 0, y: 12 }} 
                 whileInView={{ opacity: 1, y: 0 }} 
                 viewport={{ once: true }} 
-                className="rounded-[2.25rem] bg-[#0f172a] text-white p-6 md:p-8 border border-slate-800 shadow-[0_20px_50px_rgba(15,23,42,0.08)] flex flex-col justify-between"
+                className="rounded-2xl bg-[#0f172a] text-white p-6 md:p-8 border border-slate-800 shadow-[0_20px_50px_rgba(15,23,42,0.08)] flex flex-col justify-between"
               >
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">Contact Info</h2>
