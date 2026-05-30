@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { HiArrowLeft } from 'react-icons/hi';
+import { HiArrowLeft, HiLink, HiCheck } from 'react-icons/hi';
+import { FaWhatsapp, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 import SEOHead from '../components/SEOHead';
 import { config } from '../config.jsx';
 
@@ -68,6 +69,66 @@ const BlogPost = () => {
   
   // Find current post
   const post = posts.find((p) => p.slug === slug);
+
+  const [copied, setCopied] = useState(false);
+  const [statusMsg, setStatusMsg] = useState('');
+
+  const shareUrl = post ? `https://harieshussain.tech/blog/${post.slug}` : '';
+
+  const handleCopyLink = () => {
+    if (!shareUrl) return;
+    navigator.clipboard.writeText(shareUrl).then(() => {
+      setCopied(true);
+      setStatusMsg('Link copied to clipboard successfully!');
+      setTimeout(() => {
+        setCopied(false);
+      }, 3000);
+      setTimeout(() => {
+        setStatusMsg('');
+      }, 5000);
+    }).catch(() => {
+      setStatusMsg('Failed to copy link. Please copy the URL from address bar.');
+    });
+  };
+
+  const handleInstagramShare = () => {
+    if (!shareUrl) return;
+    
+    // Check if the user is on a mobile device
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobileDevice && navigator.share) {
+      navigator.share({
+        title: post.title,
+        text: post.summary,
+        url: shareUrl
+      }).then(() => {
+        setStatusMsg('Shared successfully!');
+        setTimeout(() => setStatusMsg(''), 4000);
+      }).catch((err) => {
+        if (err.name !== 'AbortError') {
+          copyLinkAndSuggestInstagram();
+        }
+      });
+    } else {
+      copyLinkAndSuggestInstagram();
+    }
+  };
+
+  const copyLinkAndSuggestInstagram = () => {
+    navigator.clipboard.writeText(shareUrl).then(() => {
+      setCopied(true);
+      setStatusMsg('Instagram does not support direct website sharing. The link has been copied.');
+      setTimeout(() => {
+        setCopied(false);
+      }, 3000);
+      setTimeout(() => {
+        setStatusMsg('');
+      }, 6000);
+    }).catch(() => {
+      setStatusMsg('Please copy the URL from the browser address bar to share on Instagram.');
+    });
+  };
 
   if (!post) {
     return (
@@ -216,6 +277,81 @@ const BlogPost = () => {
                   </div>
                 </div>
               )}
+
+              {/* Share Section */}
+              <div className="mt-12 pt-8 border-t border-slate-200">
+                <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">
+                  Share this article
+                </h3>
+                <div className="flex flex-wrap items-center gap-3">
+                  {/* WhatsApp */}
+                  <a
+                    href={`https://api.whatsapp.com/send?text=${encodeURIComponent(post.title + ' - ' + shareUrl)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2.5 bg-slate-50 border border-slate-200/60 hover:border-green-500/20 hover:bg-green-50/30 text-slate-600 hover:text-green-600 rounded-xl transition-all duration-200 text-sm font-semibold"
+                    aria-label="Share on WhatsApp"
+                  >
+                    <FaWhatsapp className="w-4 h-4" />
+                    <span>WhatsApp</span>
+                  </a>
+
+                  {/* LinkedIn */}
+                  <a
+                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2.5 bg-slate-50 border border-slate-200/60 hover:border-blue-500/20 hover:bg-blue-50/30 text-slate-600 hover:text-blue-600 rounded-xl transition-all duration-200 text-sm font-semibold"
+                    aria-label="Share on LinkedIn"
+                  >
+                    <FaLinkedin className="w-4 h-4" />
+                    <span>LinkedIn</span>
+                  </a>
+
+                  {/* Twitter / X */}
+                  <a
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(shareUrl)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2.5 bg-slate-50 border border-slate-200/60 hover:border-slate-800/10 hover:bg-slate-100/50 text-slate-600 hover:text-slate-900 rounded-xl transition-all duration-200 text-sm font-semibold"
+                    aria-label="Share on X (Twitter)"
+                  >
+                    <FaTwitter className="w-4 h-4" />
+                    <span>X</span>
+                  </a>
+
+                  {/* Instagram */}
+                  <button
+                    onClick={handleInstagramShare}
+                    className="flex items-center gap-2 px-4 py-2.5 bg-slate-50 border border-slate-200/60 hover:border-pink-500/20 hover:bg-pink-50/30 text-slate-600 hover:text-pink-600 rounded-xl transition-all duration-200 text-sm font-semibold"
+                    aria-label="Share on Instagram"
+                  >
+                    <FaInstagram className="w-4 h-4" />
+                    <span>Instagram</span>
+                  </button>
+
+                  {/* Copy Link */}
+                  <button
+                    onClick={handleCopyLink}
+                    className={`flex items-center gap-2 px-4 py-2.5 border rounded-xl transition-all duration-200 text-sm font-semibold ${
+                      copied
+                        ? 'bg-green-50 border-green-200 text-green-600'
+                        : 'bg-slate-50 border-slate-200/60 hover:border-blue-500/20 hover:bg-blue-50/30 text-slate-600 hover:text-blue-600'
+                    }`}
+                    aria-label="Copy article link"
+                  >
+                    {copied ? <HiCheck className="w-4 h-4" /> : <HiLink className="w-4 h-4" />}
+                    <span>{copied ? 'Link Copied!' : 'Copy Link'}</span>
+                  </button>
+                </div>
+
+                {/* Helpful status tip */}
+                {statusMsg && (
+                  <p className="mt-3 text-xs text-slate-500 bg-slate-100/65 border border-slate-200/50 px-3 py-2 rounded-lg inline-block">
+                    {statusMsg}
+                  </p>
+                )}
+              </div>
 
               {/* In-article CTA card */}
               <div className="mt-12 p-6 md:p-8 bg-blue-50/40 border border-blue-100/80 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-sm">
