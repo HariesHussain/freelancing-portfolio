@@ -151,7 +151,7 @@ const Home = () => {
                   <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
                     <div>
                       <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">{project.title}</h3>
-                      <p className="text-xs text-slate-500 italic mb-4">{project.problemSolution}</p>
+                      <p className="text-xs text-slate-600 italic mb-4">{project.problemSolution}</p>
                       <p className="text-slate-600 text-sm leading-relaxed mb-6">{project.description}</p>
                     </div>
                     <a
@@ -159,6 +159,7 @@ const Home = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-900 text-white font-bold rounded-xl hover:bg-blue-600 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-sm hover:shadow-md text-sm w-fit mt-auto focus:outline-none focus:ring-2 focus:ring-slate-500/20"
+                      aria-label={`Preview live website for ${project.title}`}
                     >
                       Preview Live Project
                     </a>
@@ -259,7 +260,7 @@ const Home = () => {
                     </div>
                     <div>
                       <p className="text-slate-900 font-bold text-xs md:text-sm leading-tight">{test.clientName}</p>
-                      <p className="text-slate-500 text-[10px] md:text-xs mt-0.5">{test.businessName}</p>
+                      <p className="text-slate-600 text-[10px] md:text-xs mt-0.5">{test.businessName}</p>
                     </div>
                   </div>
                 </motion.div>

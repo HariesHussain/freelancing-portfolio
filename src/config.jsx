@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaPhone, FaMapPin, FaCheckCircle } from "react-icons/fa";
-import { blogPosts } from './blogData.jsx';
 import { 
     HiMail, 
     HiBriefcase, 
@@ -276,8 +275,7 @@ export const config = {
             value: "India",
             link: null
         }
-    ],
-    blogPosts
+    ]
 };
 
 

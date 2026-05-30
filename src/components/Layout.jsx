@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import StickyCTA from './StickyCTA';
-import CookieConsent from './CookieConsent';
+
+const StickyCTA = lazy(() => import('./StickyCTA'));
+const CookieConsent = lazy(() => import('./CookieConsent'));
 
 const Layout = ({ children }) => {
   return (
@@ -12,8 +13,10 @@ const Layout = ({ children }) => {
         {children}
       </main>
       <Footer />
-      <CookieConsent />
-      <StickyCTA />
+      <Suspense fallback={null}>
+        <CookieConsent />
+        <StickyCTA />
+      </Suspense>
     </div>
   );
 };

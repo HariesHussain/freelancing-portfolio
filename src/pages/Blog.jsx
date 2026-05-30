@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SEOHead from '../components/SEOHead';
 import { config } from '../config.jsx';
+import { blogPosts } from '../blogData.jsx';
 
 // Timezone-safe helper to format YYYY-MM-DD to "Month DD, YYYY"
 const formatDate = (dateStr) => {
@@ -23,7 +24,7 @@ const formatDate = (dateStr) => {
 };
 
 const Blog = () => {
-  const posts = config.blogPosts || [];
+  const posts = blogPosts || [];
 
   return (
     <>
@@ -95,6 +96,7 @@ const Blog = () => {
                     <Link
                       to={`/blog/${post.slug}`}
                       className="text-xs md:text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors"
+                      aria-label={`Read article: ${post.title}`}
                     >
                       Read Article →
                     </Link>

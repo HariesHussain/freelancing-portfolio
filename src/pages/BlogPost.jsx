@@ -5,6 +5,7 @@ import { HiArrowLeft, HiLink, HiCheck } from 'react-icons/hi';
 import { FaWhatsapp, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 import SEOHead from '../components/SEOHead';
 import { config } from '../config.jsx';
+import { blogPosts } from '../blogData.jsx';
 
 // Helper to parse simple markdown-style links: [Link Text](url)
 const renderTextWithLinks = (text) => {
@@ -65,7 +66,7 @@ const formatDate = (dateStr) => {
 
 const BlogPost = () => {
   const { slug } = useParams();
-  const posts = config.blogPosts || [];
+  const posts = blogPosts || [];
   
   // Find current post
   const post = posts.find((p) => p.slug === slug);
@@ -395,7 +396,7 @@ const BlogPost = () => {
                     </div>
                     <div className="flex items-center justify-between pt-3 border-t border-slate-50 text-[10px] text-slate-600 font-medium">
                       <span>{formatDate(rPost.publishedAt)}</span>
-                      <Link to={`/blog/${rPost.slug}`} className="text-blue-600 hover:underline font-semibold">
+                      <Link to={`/blog/${rPost.slug}`} className="text-blue-600 hover:underline font-semibold" aria-label={`Read guide: ${rPost.title}`}>
                         Read Guide →
                       </Link>
                     </div>
