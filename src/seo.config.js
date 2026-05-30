@@ -71,7 +71,7 @@ export const SEO = {
   ].join(', '),
 
   // â”€â”€â”€ Open Graph / Social â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-  ogImage: '/hero-profile.png', // resolved dynamically via SITE_URL
+  ogImage: '/hero-profile.webp', // resolved dynamically via SITE_URL
 
   // â”€â”€â”€ Services (for Schema) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   

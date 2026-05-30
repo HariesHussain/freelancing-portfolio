@@ -208,7 +208,7 @@ export const config = {
             results: ["50%+ booking inquiries", "Delivered in 5 days", "Google Maps integrated"],
             technologies: ["React", "Vite", "Tailwind CSS", "EmailJS"],
             description: "A professional clinic website for Verma Dental Studio showcasing doctor profiles, treatment details, and patient booking inquiries.",
-            image: "/projects/dental-studio.png",
+            image: "/projects/dental-studio.webp",
             demoLink: "https://samee-dental-clinic.vercel.app/"
         },
         {
@@ -217,7 +217,7 @@ export const config = {
             results: ["Improved admission inquiries", "Delivered in 8 days", "Interactive campus details"],
             technologies: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
             description: "A professional modern website for Osmania School showcasing academic programs, campus facilities, and admission queries for parents.",
-            image: "/projects/school-website.png",
+            image: "/projects/school-website.webp",
             demoLink: "https://osmania-school.vercel.app/"
         },
         {
@@ -226,7 +226,7 @@ export const config = {
             results: ["PageSpeed 94/100", "Delivered in 4 days", "WhatsApp integrated"],
             technologies: ["React", "Vite", "Tailwind CSS", "Google Maps", "Vercel"],
             description: "An authentic vintage Irani Cafe website showcasing traditional flavors, menu exploration, and rich historic aesthetics.",
-            image: "/projects/nandyal-cafe.png",
+            image: "/projects/nandyal-cafe.webp",
             demoLink: "https://nandyal-cafe.vercel.app/"
         },
         {
@@ -235,7 +235,7 @@ export const config = {
             results: ["Core Web Vitals passed", "Delivered in 7 days", "AI coach integrated"],
             technologies: ["React", "Vite", "Tailwind CSS", "OpenAI API", "Chart.js"],
             description: "A comprehensive gym fitness platform helping users with guided workouts, exercise technique demonstrations, calorie tracking, automated fitness planning, and an integrated AI fitness coach.",
-            image: "/projects/fitgenie.png",
+            image: "/projects/fitgenie.webp",
             demoLink: "https://fitgenie-x.vercel.app/"
         },
         {
@@ -244,7 +244,7 @@ export const config = {
             results: ["PageSpeed 96/100", "Delivered in 5 days", "SEO-ready structure"],
             technologies: ["React", "Vite", "Tailwind CSS", "Framer Motion", "Vercel"],
             description: "A premium, fully responsive personal portfolio designed to showcase projects, skills, and professional experience with high-end animations.",
-            image: "/projects/portfolio.png",
+            image: "/projects/portfolio.webp",
             demoLink: "https://haries-portfolio.vercel.app/"
         },
         {
@@ -253,7 +253,7 @@ export const config = {
             results: ["Fast mobile performance", "Delivered in 6 days", "Analytics-ready layout"],
             technologies: ["React", "Vite", "Tailwind CSS", "LocalStorage", "Vercel"],
             description: "A premium dashboard designed for personal tracking. Built for speed, flawless user experience, and modern aesthetics.",
-            image: "/projects/habittracker.png",
+            image: "/projects/habittracker.webp",
             demoLink: "https://habitflowx.vercel.app"
         }
     ],

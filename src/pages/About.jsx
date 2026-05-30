@@ -76,9 +76,12 @@ const About = () => {
                 className="w-[36%] lg:w-2/5 flex justify-end shrink-0"
               >
                 <img
-                  src="/hero-profile.png"
+                  src="/hero-profile.webp"
                   alt="Haries Hussain — Freelance Web Developer from Nandyal, Andhra Pradesh"
                   className="w-full max-w-[130px] xs:max-w-[160px] sm:max-w-[220px] md:max-w-[280px] lg:max-w-[360px] 2xl:max-w-[400px] 3xl:max-w-[450px] 4xl:max-w-[500px] rounded-2xl border border-slate-200 shadow-sm"
+                  width="400"
+                  height="500"
+                  loading="eager"
                 />
               </motion.div>
             </div>

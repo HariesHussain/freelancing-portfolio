@@ -242,8 +242,8 @@ const Services = () => {
 
                   <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                     <div>
-                      <p className="text-xs text-slate-400">Delivery: <span className="font-semibold text-slate-700">{service.delivery}</span></p>
-                      <p className="text-xs text-slate-400">Investment: <span className="font-bold text-blue-600 text-sm">{service.price}</span></p>
+                      <p className="text-xs text-slate-600">Delivery: <span className="font-semibold text-slate-700">{service.delivery}</span></p>
+                      <p className="text-xs text-slate-600">Investment: <span className="font-bold text-blue-600 text-sm">{service.price}</span></p>
                     </div>
                     <a
                       href="https://wa.me/919391175096"

@@ -32,7 +32,7 @@ const CookieConsent = () => {
           className="fixed bottom-[72px] left-4 right-4 md:bottom-6 md:right-6 md:left-auto md:max-w-[380px] bg-white/95 backdrop-blur-xs border border-slate-200/80 rounded-xl shadow-[0_8px_24px_rgba(15,23,42,0.06)] z-[99] p-4"
         >
           <div className="flex flex-col gap-3">
-            <p className="text-[11px] md:text-xs text-slate-500 leading-normal font-normal">
+            <p className="text-[11px] md:text-xs text-slate-600 leading-normal font-normal">
               We use cookies and analytics tools to enhance your browsing experience. By continuing to use this website, you agree to our{' '}
               <Link to="/privacy-policy" className="text-blue-600 hover:underline font-medium">Privacy Policy</Link>,{' '}
               <Link to="/terms" className="text-blue-600 hover:underline font-medium">Terms & Conditions</Link>, and{' '}
@@ -41,9 +41,9 @@ const CookieConsent = () => {
             <div className="flex items-center justify-between pt-2.5 border-t border-slate-100/80">
               <Link
                 to="/cookie-policy"
-                className="text-[10px] md:text-xs font-bold text-slate-400 hover:text-slate-600 transition-colors"
+                className="text-[10px] md:text-xs font-bold text-slate-600 hover:text-slate-800 transition-colors"
               >
-                Learn More
+                Read Cookie Policy
               </Link>
               <button
                 onClick={handleAccept}

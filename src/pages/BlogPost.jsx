@@ -173,7 +173,7 @@ const BlogPost = () => {
               <span className="text-xs bg-blue-50 text-blue-600 font-bold px-2.5 py-0.5 rounded-md">
                 {post.category}
               </span>
-              <span className="text-xs text-slate-400 font-medium">
+              <span className="text-xs text-slate-600 font-medium">
                 {post.readTime}
               </span>
             </div>
@@ -182,7 +182,7 @@ const BlogPost = () => {
               {post.title}
             </h1>
 
-            <div className="flex items-center gap-3 pt-3 border-t border-slate-100 text-xs text-slate-400 font-medium">
+            <div className="flex items-center gap-3 pt-3 border-t border-slate-100 text-xs text-slate-600 font-medium">
               <span>By <Link to="/about" className="text-blue-600 hover:text-blue-700 transition-colors">{post.author}</Link></span>
               <span className="text-slate-300">•</span>
               <span>Published: {formatDate(post.publishedAt)}</span>
@@ -280,7 +280,7 @@ const BlogPost = () => {
 
               {/* Share Section */}
               <div className="mt-12 pt-8 border-t border-slate-200">
-                <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">
+                <h3 className="text-sm font-bold text-slate-600 uppercase tracking-wider mb-4">
                   Share this article
                 </h3>
                 <div className="flex flex-wrap items-center gap-3">
@@ -347,7 +347,7 @@ const BlogPost = () => {
 
                 {/* Helpful status tip */}
                 {statusMsg && (
-                  <p className="mt-3 text-xs text-slate-500 bg-slate-100/65 border border-slate-200/50 px-3 py-2 rounded-lg inline-block">
+                  <p className="mt-3 text-xs text-slate-600 bg-slate-100/65 border border-slate-200/50 px-3 py-2 rounded-lg inline-block">
                     {statusMsg}
                   </p>
                 )}
@@ -383,17 +383,17 @@ const BlogPost = () => {
                 {relatedPosts.map((rPost) => (
                   <article key={rPost.slug} className="p-5 border border-slate-200/60 hover:border-blue-500/20 shadow-[0_8px_30px_rgba(15,23,42,0.02)] hover:shadow-[0_16px_40px_rgba(15,23,42,0.04)] hover:-translate-y-1 rounded-2xl transition-all duration-300 flex flex-col justify-between">
                     <div>
-                      <span className="text-[10px] bg-slate-100 text-slate-500 font-bold px-2 py-0.5 rounded-md mb-3 inline-block">
+                      <span className="text-[10px] bg-slate-100 text-slate-600 font-bold px-2 py-0.5 rounded-md mb-3 inline-block">
                         {rPost.category}
                       </span>
                       <h3 className="text-sm md:text-base font-bold text-slate-900 mb-2 hover:text-blue-600 transition-colors line-clamp-2">
                         <Link to={`/blog/${rPost.slug}`}>{rPost.title}</Link>
                       </h3>
-                      <p className="text-xs text-slate-500 line-clamp-2 mb-4">
+                      <p className="text-xs text-slate-600 line-clamp-2 mb-4">
                         {rPost.summary}
                       </p>
                     </div>
-                    <div className="flex items-center justify-between pt-3 border-t border-slate-50 text-[10px] text-slate-400 font-medium">
+                    <div className="flex items-center justify-between pt-3 border-t border-slate-50 text-[10px] text-slate-600 font-medium">
                       <span>{formatDate(rPost.publishedAt)}</span>
                       <Link to={`/blog/${rPost.slug}`} className="text-blue-600 hover:underline font-semibold">
                         Read Guide →

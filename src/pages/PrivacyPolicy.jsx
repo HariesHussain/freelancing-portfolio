@@ -95,7 +95,7 @@ const PrivacyPolicy = () => {
 
               <div className="pt-6 border-t border-slate-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
-                  <p className="text-xs text-slate-400">Need clarification?</p>
+                  <p className="text-xs text-slate-600">Need clarification?</p>
                   <p className="text-sm font-bold text-slate-900">shaikharieshussain09@gmail.com</p>
                 </div>
                 <a

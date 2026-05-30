@@ -69,7 +69,7 @@ const Blog = () => {
                       <span className="text-xs bg-blue-50 text-blue-600 font-bold px-2.5 py-0.5 rounded-md">
                         {post.category}
                       </span>
-                      <span className="text-xs text-slate-400 font-medium">
+                      <span className="text-xs text-slate-600 font-medium">
                         {post.readTime}
                       </span>
                     </div>
@@ -89,7 +89,7 @@ const Blog = () => {
 
                   {/* Footer Row */}
                   <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                    <span className="text-xs text-slate-400 font-medium">
+                    <span className="text-xs text-slate-600 font-medium">
                       {formatDate(post.publishedAt)}
                     </span>
                     <Link

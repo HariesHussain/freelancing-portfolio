@@ -94,7 +94,7 @@ const Terms = () => {
 
               <div className="pt-6 border-t border-slate-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
-                  <p className="text-xs text-slate-400">Have questions about our terms?</p>
+                  <p className="text-xs text-slate-600">Have questions about our terms?</p>
                   <p className="text-sm font-bold text-slate-900">shaikharieshussain09@gmail.com</p>
                 </div>
                 <a

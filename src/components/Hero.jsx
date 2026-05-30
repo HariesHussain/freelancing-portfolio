@@ -82,11 +82,13 @@ const Hero = () => {
               {/* Image Container with Elegant Rounded Corners */}
               <div className="rounded-2xl xs:rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden border border-slate-200/80 shadow-[0_10px_30px_rgba(0,0,0,0.06)] lg:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.12)] bg-white aspect-[4/5] relative z-10">
                 <img
-                  src="/hero-profile.png"
+                  src="/hero-profile.webp"
                   alt="Haries Hussain — Freelance Web Developer in Nandyal, India"
                   className="w-full h-full object-cover select-none"
                   width="700"
                   height="875"
+                  loading="eager"
+                  fetchpriority="high"
                 />
               </div>
 
