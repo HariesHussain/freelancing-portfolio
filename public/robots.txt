@@ -1,7 +1,7 @@
 # ============================================================
 # robots.txt — Production Search Engine Instructions
 # ============================================================
-# Website: https://harieshussain.tech
+# Website: https://www.harieshussain.tech
 # Target: Search engine crawlers and indexing spiders
 # ============================================================
 
@@ -23,4 +23,4 @@ Disallow: /temp/
 Disallow: /tmp/
 
 # XML Sitemap Location
-Sitemap: https://harieshussain.tech/sitemap.xml
+Sitemap: https://www.harieshussain.tech/sitemap.xml

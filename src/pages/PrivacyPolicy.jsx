@@ -29,7 +29,7 @@ const PrivacyPolicy = () => {
               <div>
                 <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">1. Introduction</h2>
                 <p>
-                  Welcome to Haries Hussain Portfolio & Agency ("we", "our", "us"). We value your privacy and are committed to protecting your personal data. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website (https://harieshussain.tech) or contract our services.
+                  Welcome to Haries Hussain Portfolio & Agency ("we", "our", "us"). We value your privacy and are committed to protecting your personal data. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website (https://www.harieshussain.tech) or contract our services.
                 </p>
               </div>
 

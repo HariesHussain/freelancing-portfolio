@@ -6,6 +6,7 @@ import { FaWhatsapp, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 import SEOHead from '../components/SEOHead';
 import { config } from '../config.jsx';
 import { blogPosts } from '../blogData.jsx';
+import { SITE_URL } from '../seo.config.js';
 
 // Helper to parse simple markdown-style links: [Link Text](url)
 const renderTextWithLinks = (text) => {
@@ -74,7 +75,7 @@ const BlogPost = () => {
   const [copied, setCopied] = useState(false);
   const [statusMsg, setStatusMsg] = useState('');
 
-  const shareUrl = post ? `https://harieshussain.tech/blog/${post.slug}` : '';
+  const shareUrl = post ? `${SITE_URL}/blog/${post.slug}` : '';
 
   const handleCopyLink = () => {
     if (!shareUrl) return;
@@ -154,7 +155,7 @@ const BlogPost = () => {
         title={`${post.title} | Haries Hussain`}
         description={post.summary}
         keywords={post.keywords || `${post.category.toLowerCase()} guide, web development india, Haries Hussain`}
-        canonical={`https://harieshussain.tech/blog/${post.slug}`}
+        canonical={`${SITE_URL}/blog/${post.slug}`}
         schemaType="article"
         faqData={post.faqs}
         articleData={post}

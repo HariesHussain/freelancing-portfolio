@@ -29,7 +29,7 @@ const Terms = () => {
               <div>
                 <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">1. Agreement to Terms</h2>
                 <p>
-                  By accessing or using the services provided by Haries Hussain Portfolio & Agency ("we", "our", "us") on our website (https://harieshussain.tech), you agree to be bound by these Terms & Conditions. If you do not agree to all of these terms, please do not use our website or hire us for services.
+                  By accessing or using the services provided by Haries Hussain Portfolio & Agency ("we", "our", "us") on our website (https://www.harieshussain.tech), you agree to be bound by these Terms & Conditions. If you do not agree to all of these terms, please do not use our website or hire us for services.
                 </p>
               </div>
 

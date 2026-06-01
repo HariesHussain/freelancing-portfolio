@@ -8,7 +8,7 @@
 //
 // ============================================================
 
-export const SITE_URL = 'https://harieshussain.tech'; // ← CHANGE THIS TO YOUR FINAL DOMAIN
+export const SITE_URL = 'https://www.harieshussain.tech'; // ← CHANGE THIS TO YOUR FINAL DOMAIN
 
 export const SEO = {
   // ─── Identity ───────────────────────────────────────────

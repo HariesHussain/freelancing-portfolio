@@ -1,4 +1,17 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "harieshussain.tech"
+        }
+      ],
+      "destination": "https://www.harieshussain.tech/:path*",
+      "statusCode": 301
+    }
+  ],
   "routes": [
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }

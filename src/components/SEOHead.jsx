@@ -15,7 +15,13 @@ const SEOHead = ({
     const resolvedTitle = title || SEO.title;
     const resolvedDescription = description || SEO.description;
     const resolvedKeywords = keywords || SEO.keywords;
-    const resolvedCanonical = canonical || `${SITE_URL}${window.location.pathname}`;
+    
+    // Normalize all canonical URLs to the preferred SITE_URL
+    let resolvedCanonical = canonical || `${SITE_URL}${window.location.pathname}`;
+    if (resolvedCanonical.includes('https://harieshussain.tech')) {
+      resolvedCanonical = resolvedCanonical.replace('https://harieshussain.tech', SITE_URL);
+    }
+
     const ogImageFull = `${SITE_URL}${SEO.ogImage}`;
 
     document.title = resolvedTitle;
