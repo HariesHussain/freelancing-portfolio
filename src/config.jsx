@@ -149,13 +149,6 @@ export const config = {
     ],
     testimonials: [
         {
-            clientName: "Rahul Verma",
-            businessName: "Dr. Sudhakar Dental Hospital",
-            rating: 5,
-            review: "The website was delivered fast and looked premium from day one. We started getting more patient inquiries within the first week.",
-            initials: "RV"
-        },
-        {
             clientName: "Ayesha Khan",
             businessName: "Khan Interiors",
             rating: 5,
@@ -201,15 +194,6 @@ export const config = {
         { title: "Support After Delivery", icon: <HiSupport className="w-6 h-6 text-blue-600" /> }
     ],
     demoProjects: [
-        {
-            title: "Dr. Sudhakar Dental Hospital",
-            problemSolution: "Needed: Patient booking system | Built: Clinic website with schedule flow",
-            results: ["50%+ booking inquiries", "Delivered in 5 days", "Google Maps integrated"],
-            technologies: ["React", "Vite", "Tailwind CSS", "EmailJS"],
-            description: "A professional clinic website for Dr. Sudhakar Dental Hospital showcasing doctor profiles, treatment details, and patient booking inquiries.",
-            image: "/projects/dental-studio.webp",
-            demoLink: "https://samee-dental-clinic.vercel.app/"
-        },
         {
             title: "Osmania School",
             problemSolution: "Needed: Online brand visibility | Built: Responsive school website",
