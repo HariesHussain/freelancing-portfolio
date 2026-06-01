@@ -150,7 +150,7 @@ export const config = {
     testimonials: [
         {
             clientName: "Rahul Verma",
-            businessName: "Verma Dental Studio",
+            businessName: "Dr. Sudhakar Dental Hospital",
             rating: 5,
             review: "The website was delivered fast and looked premium from day one. We started getting more patient inquiries within the first week.",
             initials: "RV"
@@ -202,11 +202,11 @@ export const config = {
     ],
     demoProjects: [
         {
-            title: "Verma Dental Studio",
+            title: "Dr. Sudhakar Dental Hospital",
             problemSolution: "Needed: Patient booking system | Built: Clinic website with schedule flow",
             results: ["50%+ booking inquiries", "Delivered in 5 days", "Google Maps integrated"],
             technologies: ["React", "Vite", "Tailwind CSS", "EmailJS"],
-            description: "A professional clinic website for Verma Dental Studio showcasing doctor profiles, treatment details, and patient booking inquiries.",
+            description: "A professional clinic website for Dr. Sudhakar Dental Hospital showcasing doctor profiles, treatment details, and patient booking inquiries.",
             image: "/projects/dental-studio.webp",
             demoLink: "https://samee-dental-clinic.vercel.app/"
         },
